@@ -2,6 +2,7 @@
   --blue-main: #0065fc;
   --blue-second: #deebff;
   --grey-main: #f2f2f2;
+  --white-main: #ffffff;
 }
 
 /* Police intégrée */
@@ -32,10 +33,11 @@ body {
 }
 
 .h2_bold {
+  font-size: 1.5rem;
   font-family: "Raleway-bold", Arial, Helvetica, sans-serif;
 }
-.h3_bold {
-  font-size: 15xp;
+h3 {
+  font-size: 1rem;
   font-family: "Raleway-bold", Arial, Helvetica, sans-serif;
 }
 a {
@@ -57,6 +59,9 @@ span {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.logo img {
+  transform: scale(0.6);
 }
 nav a {
   margin-right: 15px;
@@ -100,7 +105,7 @@ input {
 
 .btn_search {
   background: var(--blue-main);
-  color: white;
+  color: var(--white-main);
   border-radius: 0 15px 15px 0;
   border: none;
   cursor: pointer;
@@ -158,37 +163,55 @@ input {
 }
 
 /* DIV LOGEMENT */
+
+/* Placement: aside / article */
 .flex_aisde_article {
   display: flex;
   flex-direction: row-reverse;
-  justify-content: space-between;
+  justify-content: space-around;
 }
+
+/* dimension aside "populaire"*/
 .aside_popular {
   background: var(--grey-main);
-  width: 20%;
-  padding: 25px;
-  border-radius: 25px;
   display: flex;
   flex-direction: column;
+  width: 30%;
+  padding: 12px;
+  border-radius: 25px;
 }
+
+/* dimension article "hébergements" */
 .article_1 {
   background: var(--grey-main);
-  width: 70%;
-  padding: 15px;
+  width: 60%;
+  padding: 12px;
   border-radius: 25px;
-  display: flex;
-  flex-direction: column;
 }
+
+/* Style général des cartes */
+.color_card {
+  background-color: var(--white-main);
+  border: 5px solid var(--white-main);
+  box-shadow: 0px 0px 15px gray;
+  border-radius: 20px;
+}
+.star {
+  display: flex;
+  font-size: 12px;
+  padding-top: 20px;
+}
+
 /* ASIDE */
+
+/* icon h1 */
 .icon_title {
   font-size: 25px;
 }
 
+/* cartes aside */
 .card_aside {
   display: flex;
-  background: white;
-  border: 5px solid white;
-  border-radius: 20px;
   height: 125px;
   margin: 25px 0;
 }
@@ -202,39 +225,82 @@ input {
   object-fit: cover;
   border-radius: 15px 0 0 15px;
 }
+
 .text_card {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  padding: 7px 0 0 7px;
+  justify-content: space-between;
+  padding: 10px 0 0 10px;
 }
 .text_card p,
-.text_card .h3_bold {
+.text_card h3 {
   padding: 0;
   margin: 0;
 }
-
-.star {
-  font-size: 12px;
+.text_card p {
+  font-size: 14px;
 }
 
-/* Hébergement */
-.flex_article_card {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+/* ARTICLE 1 */
+
+/* placement des cartes hébergement à Marseille */
+.grid_article_card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
+
+/* dimension cartes */
 .card_article {
   width: 250px;
-  height: 100px;
+  height: 200px;
+  margin: 20px 0;
 }
 .img_article {
   width: 100%;
-  height: 50%;
+  height: 60%;
 }
 .img_article img {
   height: 100%;
+  border-radius: 15px 15px 0 0;
   width: 100%;
+  object-fit: cover;
+}
+
+/* TEST 1480px */
+@media all and (max-width: 1480px) {
+  .flex_aisde_article {
+    flex-direction: column;
+  }
+  .aside_popular {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  .article_1 {
+    width: 100%;
+  }
+  /* ASIDE */
+  .flex_aside {
+    display: flex;
+    justify-content: space-around;
+  }
+  .card_aside {
+    width: 90%;
+  }
+
+  /* ARTICLE */
+  .card_article {
+    width: 90%;
+  }
+}
+
+/* VERSON 992px */
+@media all and (max-width: 992px) {
+  .flex_aside {
+    flex-direction: column;
+  }
+  .card_aside {
+    margin: 10px 0;
+  }
 }
 
 /* VERSION MOBILE HEADER */
@@ -256,17 +322,17 @@ input {
   }
   nav a:hover,
   nav a:focus {
-    border-top: 3px solid white;
+    border-top: 3px solid var(--white-main);
     border-bottom: 3px solid var(--blue-main);
   }
-}
 
-/* VERSION MOBILE SECTION  */
-@media all and (max-width: 768px) {
+  /* VERSION MOBILE SECTION  */
   section {
     margin-left: 10%;
   }
-
+  input {
+    width: 60%;
+  }
   .word_search {
     display: none;
   }
@@ -275,5 +341,14 @@ input {
     background: var(--blue-main);
     color: var(--grey-main);
     border-radius: 10px 10px 10px 10px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .article_1 {
+  }
+  .flex_article_card {
+    display: flex;
+    flex-direction: column;
   }
 }
