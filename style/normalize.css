@@ -33,7 +33,7 @@ body {
 }
 
 .h2_bold {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-family: "Raleway-bold", Arial, Helvetica, sans-serif;
 }
 h3 {
@@ -55,7 +55,7 @@ span {
 }
 
 /* HEADER */
-.flex_space-between {
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -86,6 +86,11 @@ form {
   margin-top: 25px;
 }
 
+.form {
+  padding: 15px;
+  font-size: 20px;
+  font-family: "Raleway-bold", Arial, Helvetica, sans-serif;
+}
 .fa-location-dot {
   background: var(--grey-main);
   border-radius: 50% 0 0 50%;
@@ -96,11 +101,6 @@ input {
   border: 0px;
   border-top: 1px solid var(--grey-main);
   border-bottom: 1px solid var(--grey-main);
-}
-.form {
-  padding: 15px;
-  font-size: 20px;
-  font-family: "Raleway-bold", Arial, Helvetica, sans-serif;
 }
 
 .btn_search {
@@ -165,7 +165,7 @@ input {
 /* DIV LOGEMENT */
 
 /* Placement: aside / article */
-.flex_aisde_article {
+.aside_article {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-around;
@@ -176,6 +176,7 @@ input {
   background: var(--grey-main);
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   width: 30%;
   padding: 12px;
   border-radius: 25px;
@@ -205,15 +206,28 @@ input {
 /* ASIDE */
 
 /* icon h1 */
+.h2_icon {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .icon_title {
   font-size: 25px;
 }
 
 /* cartes aside */
+.flex_aside {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
 .card_aside {
   display: flex;
-  height: 125px;
-  margin: 25px 0;
+  height: 140px;
+  margin: 0 25px;
 }
 
 .img_aside {
@@ -230,7 +244,7 @@ input {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 10px 0 0 10px;
+  padding: 10px 0 10px 10px;
 }
 .text_card p,
 .text_card h3 {
@@ -243,17 +257,15 @@ input {
 
 /* ARTICLE 1 */
 
-/* placement des cartes hébergement à Marseille */
-.grid_article_card {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+/* placement des cartes hébergement à Marseille  */
+.article_card {
+  display: flex;
+  justify-content: space-around;
 }
-
-/* dimension cartes */
 .card_article {
-  width: 250px;
+  width: 275px;
   height: 200px;
-  margin: 20px 0;
+  margin: 20px 10px;
 }
 .img_article {
   width: 100%;
@@ -268,7 +280,7 @@ input {
 
 /* TEST 1480px */
 @media all and (max-width: 1480px) {
-  .flex_aisde_article {
+  .aside_article {
     flex-direction: column;
   }
   .aside_popular {
@@ -281,34 +293,39 @@ input {
   /* ASIDE */
   .flex_aside {
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
+    /* justify-content: space-around; */
   }
   .card_aside {
-    width: 90%;
+    width: 100%;
+    margin: 10px 0;
   }
 
   /* ARTICLE */
   .card_article {
     width: 90%;
+    margin: 10px auto;
   }
 }
 
 /* VERSON 992px */
 @media all and (max-width: 992px) {
+  /* dimension de la page */
+  .bloc_page {
+    width: 100%;
+  }
   .flex_aside {
     flex-direction: column;
   }
-  .card_aside {
-    margin: 10px 0;
+  .aside_popular {
+    width: 95%;
+    margin: 0 auto;
   }
 }
 
 /* VERSION MOBILE HEADER */
 @media all and (max-width: 768px) {
-  .bloc_page {
-    width: 100%;
-  }
-  .flex_space-between {
+  header {
     flex-direction: column;
   }
   nav {
@@ -345,10 +362,14 @@ input {
 }
 
 @media all and (max-width: 768px) {
-  .article_1 {
+  .aside_popular {
+    width: 100%;
   }
-  .flex_article_card {
+  .article_card {
     display: flex;
+    flex-direction: column;
+  }
+  .flex_aside {
     flex-direction: column;
   }
 }
