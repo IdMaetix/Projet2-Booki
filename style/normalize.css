@@ -181,13 +181,13 @@ input {
   background: var(--grey-main);
   /* padding: 20px; */
   border-radius: 20px;
-  width: 35%;
+  width: 25%;
 }
 .article_1 {
   background: var(--grey-main);
   /* padding: 20px; */
   border-radius: 20px;
-  width: 60%;
+  width: 70%;
 }
 
 /* class commune */
