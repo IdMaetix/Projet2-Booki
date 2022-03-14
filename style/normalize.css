@@ -1,3 +1,4 @@
+/* Variable de couleur */
 :root {
   --blue-main: #0065fc;
   --blue-second: #deebff;
@@ -15,6 +16,7 @@
   src: url(./font/Raleway-Bold.ttf);
 }
 
+/* Effet de scrolling */
 html {
   scroll-behavior: smooth;
 }
@@ -23,10 +25,6 @@ html {
     scroll-behavior: auto;
   }
 }
-/* * {
-  padding: 0;
-  margin: 0;
-} */
 
 /* Changement globaux */
 body {
@@ -35,7 +33,8 @@ body {
   padding: 0;
   font-family: "Raleway-Regular", Arial, Helvetica, sans-serif;
 }
-.bloc_page {
+
+.bloc_page /* Dimension Desktop */ {
   width: 90%;
   margin: 0 auto;
 }
@@ -69,7 +68,7 @@ header {
   align-items: center;
 }
 .logo img {
-  transform: scale(0.6);
+  margin-left: 20px;
 }
 nav a {
   margin-right: 15px;
@@ -150,8 +149,12 @@ input {
 }
 .filter p {
   margin: 0;
-  padding: 10px;
+  padding: 15px;
   font-family: "Raleway-bold", Arial, Helvetica, sans-serif;
+}
+.flex_filter h2 {
+  padding-top: 10px;
+  margin-right: 25px;
 }
 .filter:hover {
   border: 3px solid var(--blue-second);
@@ -188,6 +191,9 @@ input {
   /* padding: 20px; */
   border-radius: 20px;
   width: 70%;
+}
+.article_1 h2 {
+  padding-left: 20px;
 }
 
 /* class commune */
@@ -276,6 +282,62 @@ input {
 .text_article p {
   margin: 10px 0;
   font-size: 12px;
+}
+
+/* ACTIVITÉS À MARSEILLE */
+.activity_article h2 {
+  margin: 20px;
+}
+.all_activity {
+  display: flex;
+}
+.card_activity {
+  margin: 0 20px;
+  box-shadow: 0px 0px 5px grey;
+  border-radius: 20px;
+}
+.card_activity h3 {
+  margin: 10px 0 10px 10px;
+}
+.three_card {
+  display: flex;
+  height: 420px;
+}
+.three_card a {
+  width: 50%;
+}
+.vieux_calanques {
+  height: 100%;
+}
+.vieux_calanques .activity_img {
+  height: 90%;
+}
+
+#fort {
+  height: 60%;
+}
+#fort .activity_img {
+  height: 75%;
+}
+#iles {
+  height: 40%;
+}
+#iles .activity_img {
+  height: 75%;
+}
+.garde_longchamp {
+  height: 50%;
+}
+.garde_longchamp .activity_img {
+  height: 75%;
+}
+
+.activity_img img {
+  border-radius: 20px 20px 0 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  /* display: none; */
 }
 
 /* card cassé / version plus petit écran */
