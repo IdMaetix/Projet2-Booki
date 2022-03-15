@@ -285,57 +285,85 @@ input {
 }
 
 /* ACTIVITÉS À MARSEILLE */
-.activity_article h2 {
-  margin: 20px;
+.activity_article {
+  display: flex;
+  flex-direction: column;
 }
+.activity_article h2 {
+  padding: 30px 0 20px 40px;
+}
+
 .all_activity {
   display: flex;
+  width: 100%;
 }
+.three_card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  height: 500px;
+  width: 50%;
+  padding-top: 20px;
+  grid-gap: 20px;
+}
+.three_card1 {
+  grid-template-areas:
+    "vieux-port pomegues"
+    "vieux-port pomegues"
+    "vieux-port pomegues"
+    "vieux-port pomegues"
+    "vieux-port frioul"
+    "vieux-port frioul";
+  padding-right: 10px;
+}
+.three_card2 {
+  grid-template-areas:
+    "calanque dame"
+    "calanque dame"
+    "calanque dame"
+    "calanque longchamp"
+    "calanque longchamp"
+    "calanque longchamp";
+  padding-left: 10px;
+}
+
+#vieux-port {
+  grid-area: port;
+}
+#pomegues {
+  grid-area: pomegues;
+}
+#frioul {
+  grid-area: frioul;
+}
+#calanques {
+  grid-area: calanque;
+}
+#notre-dame {
+  grid-area: dame;
+}
+#longchamp {
+  grid-area: longchamp;
+}
+
 .card_activity {
-  margin: 0 20px;
   box-shadow: 0px 0px 5px grey;
   border-radius: 20px;
 }
-.card_activity h3 {
-  margin: 10px 0 10px 10px;
+
+.activity_img {
+  height: 80%;
+  width: 100%;
 }
-.three_card {
-  display: flex;
-  height: 420px;
-}
-.three_card a {
-  width: 50%;
-}
-.vieux_calanques {
-  height: 100%;
-}
-.vieux_calanques .activity_img {
+#vieux-port .activity_img,
+#calanques .activity_img {
   height: 90%;
+  width: 100%;
 }
-
-#fort {
-  height: 60%;
-}
-#fort .activity_img {
-  height: 75%;
-}
-#iles {
-  height: 40%;
-}
-#iles .activity_img {
-  height: 75%;
-}
-.garde_longchamp {
-  height: 50%;
-}
-.garde_longchamp .activity_img {
-  height: 75%;
-}
-
 .activity_img img {
-  border-radius: 20px 20px 0 0;
   height: 100%;
   width: 100%;
+  border-radius: 20px 20px 0 0;
   object-fit: cover;
   /* display: none; */
 }
@@ -371,6 +399,8 @@ input {
   .article_1 {
     width: 100%;
   }
+
+  /* Activité à Marseille */
 }
 
 /* version tablette */
@@ -387,6 +417,18 @@ input {
   .article_1 {
     background: var(--white-main);
     margin-bottom: 30px;
+  }
+  /* Activité à Marseille */
+  .all_activity {
+    flex-direction: column;
+  }
+  .three_card {
+    width: 95%;
+    margin: 0 auto;
+  }
+  .three_card2,
+  .three_card1 {
+    padding: 20px 0 0 0;
   }
 }
 
@@ -432,4 +474,6 @@ input {
     width: 100%;
     margin: 10px 0;
   }
+
+  /* Activité à Marseille */
 }
