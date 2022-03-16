@@ -134,12 +134,14 @@ input /* barre de recherche */ {
 }
 
 /* FILTRE DE RECHERCHE */
-.flex_filter {
+
+.flex_filter /* Superposer les filtres et le <p> */ {
   display: flex;
   flex-direction: column;
   margin: 25px 0 25px 0;
 }
-.flex_row {
+
+.flex_row /* Display flex-wrap pour un retour a la ligne */ {
   display: flex;
   flex-wrap: wrap;
 }
@@ -167,7 +169,7 @@ input /* barre de recherche */ {
   padding-top: 10px;
   margin-right: 25px;
 }
-.filter:hover {
+.filter:hover /* Survole des filtres */ {
   border: 3px solid var(--blue-second);
   background: var(--grey-main);
   cursor: pointer;
@@ -306,12 +308,13 @@ input /* barre de recherche */ {
   padding-left: 40px;
 }
 
-.all_activity {
+/* les cartes d'activité */
+.all_activity /* Les 6 cartes */ {
   display: flex;
   width: 100%;
 }
 
-.three_card {
+.three_card /* Les deux paquets de cartes */ {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(6, 1fr);
@@ -320,7 +323,7 @@ input /* barre de recherche */ {
   padding-top: 20px;
   grid-gap: 20px;
 }
-.three_card1 {
+.three_card1 /* Partie gauche des activités à Marseille */ {
   grid-template-areas:
     "port pomegues"
     "port pomegues"
@@ -330,7 +333,7 @@ input /* barre de recherche */ {
     "port frioul";
   padding-right: 10px;
 }
-.three_card2 {
+.three_card2 /* Seconde partie des activités à Marseille */ {
   grid-template-areas:
     "calanque dame"
     "calanque dame"
@@ -342,6 +345,7 @@ input /* barre de recherche */ {
   margin-bottom: 40px;
 }
 
+/* Attribution des noms pour le grid */
 #vieux-port {
   grid-area: port;
 }
@@ -366,7 +370,7 @@ input /* barre de recherche */ {
   border-radius: 20px;
 }
 
-.activity_img {
+.activity_img /* Dimension div pour l'img */ {
   height: 80%;
   width: 100%;
 }
@@ -386,7 +390,6 @@ input /* barre de recherche */ {
   width: 100%;
   border-radius: 20px 20px 0 0;
   object-fit: cover;
-  /* display: none; */
 }
 .card_activity h3 {
   padding-left: 20px;
@@ -413,10 +416,12 @@ footer p {
     width: 100%;
   }
 
+  /* Barre de recherche */
   section {
     margin-left: 20px;
   }
 
+  /* Hébergements et plus populaire */
   .aside_article {
     display: flex;
     flex-direction: column;
@@ -446,19 +451,18 @@ footer p {
 
 /* version tablette */
 @media all and (max-width: 992px) {
-  /* dimension de la page */
-
+  /* hébergements et les plus populaire */
   .flex_aside {
     flex-direction: column;
   }
   .flex_aside_card {
     width: 100%;
   }
-
   .article_1 {
     background: var(--white-main);
     margin-bottom: 30px;
   }
+
   /* Activité à Marseille */
   .all_activity {
     flex-direction: column;
