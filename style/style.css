@@ -7,14 +7,17 @@
 }
 
 /* Police intégrée */
-@font-face {
+/* Import font */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;500&display=swap");
+
+/* @font-face {
   font-family: "Raleway-Regular";
   src: url(./font/Raleway-Regular.ttf);
 }
 @font-face {
   font-family: "Raleway-bold";
   src: url(./font/Raleway-Bold.ttf);
-}
+} */
 
 /* Effet de scrolling */
 html {
@@ -76,10 +79,10 @@ header {
 /* Barre de navigation */
 nav a {
   margin-right: 15px;
-  padding: 20px;
+  padding: 35px 20px;
 }
 nav a:hover,
-nav a:focus {
+nav a:focus /* Animation au survol du lien */ {
   color: var(--blue-main);
   border-top: 3px solid var(--blue-main);
 }
@@ -142,6 +145,10 @@ input /* barre de recherche */ {
 }
 
 .flex_row /* Display flex-wrap pour un retour a la ligne */ {
+  display: flex;
+  flex-wrap: wrap;
+}
+.all_filter /* div qui prend tout les filtres */ {
   display: flex;
   flex-wrap: wrap;
 }
@@ -284,6 +291,7 @@ input /* barre de recherche */ {
   border-radius: 20px 20px 0 0;
   object-fit: cover;
 }
+
 .text_article {
   display: flex;
   flex-direction: column;
@@ -304,9 +312,6 @@ input /* barre de recherche */ {
   flex-direction: column;
   margin: 20px 0;
 }
-.activity_article h2 {
-  padding-left: 40px;
-}
 
 /* les cartes d'activité */
 .all_activity /* Les 6 cartes */ {
@@ -317,10 +322,9 @@ input /* barre de recherche */ {
 .three_card /* Les deux paquets de cartes */ {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(6, 1fr);
+  grid-template-rows: repeat(8, 1fr);
   height: 500px;
   width: 50%;
-  padding-top: 20px;
   grid-gap: 20px;
 }
 .three_card1 /* Partie gauche des activités à Marseille */ {
@@ -329,6 +333,8 @@ input /* barre de recherche */ {
     "port pomegues"
     "port pomegues"
     "port pomegues"
+    "port pomegues"
+    "port frioul"
     "port frioul"
     "port frioul";
   padding-right: 10px;
@@ -338,6 +344,8 @@ input /* barre de recherche */ {
     "calanque dame"
     "calanque dame"
     "calanque dame"
+    "calanque dame"
+    "calanque longchamp"
     "calanque longchamp"
     "calanque longchamp"
     "calanque longchamp";
@@ -397,11 +405,16 @@ input /* barre de recherche */ {
 
 /* FOOTER */
 footer {
-  padding: 40px 20% 40px 0;
-  display: flex;
-  justify-content: space-around;
+  padding: 40px 0;
   background: var(--grey-main);
 }
+.margin_footer {
+  margin-left: 5%;
+  margin-right: 32%;
+  display: flex;
+  justify-content: space-between;
+}
+
 footer h3 {
   padding-bottom: 5px;
 }
@@ -544,8 +557,11 @@ footer p {
   }
 
   /* FOOTER */
-  footer {
+  .margin_footer {
     flex-direction: column;
     padding-left: 20px;
+  }
+  .margin_footer div {
+    margin-bottom: 20px;
   }
 }
