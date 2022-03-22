@@ -72,11 +72,15 @@ header {
 }
 
 /* Logo du site */
-.logo img {
-  margin-left: 20px;
+.logo {
+  transform: scale(0.6);
+  margin-left: 50px;
 }
 
 /* Barre de navigation */
+nav {
+  margin-right: 50px;
+}
 nav a {
   margin-right: 15px;
   padding: 35px 20px;
@@ -143,7 +147,10 @@ input /* barre de recherche */ {
   flex-direction: column;
   margin: 25px 0 25px 0;
 }
-
+.flex_filter .h2_bold {
+  font-size: 19px;
+  padding-left: 15px;
+}
 .flex_row /* Display flex-wrap pour un retour a la ligne */ {
   display: flex;
   flex-wrap: wrap;
@@ -203,7 +210,7 @@ input /* barre de recherche */ {
 .aside_popular {
   background: var(--grey-main);
   border-radius: 20px;
-  width: 25%;
+  width: 27%;
 }
 .article_1 {
   background: var(--grey-main);
@@ -230,9 +237,11 @@ input /* barre de recherche */ {
 /* ASIDE */
 .card_aside {
   height: 135px;
-  margin: 12px 0;
+  margin: 10px 0;
   display: flex;
   margin: 20px;
+}
+.card_aside .h2_bold {
 }
 .h2_icon {
   display: flex;
@@ -240,6 +249,7 @@ input /* barre de recherche */ {
   align-items: center;
   font-size: 20px;
   padding: 0px 20px;
+  margin: 0;
 }
 
 .img_aside /* Dimension des images */ {
@@ -269,7 +279,7 @@ input /* barre de recherche */ {
 
 /* Article */
 .h2_article {
-  margin: 20px;
+  margin: 20px 20px 10px 10px;
 }
 .article_card /* Placement des cartes */ {
   display: flex;
@@ -322,10 +332,10 @@ input /* barre de recherche */ {
 .three_card /* Les deux paquets de cartes */ {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(8, 1fr);
+  grid-template-rows: repeat(10, 1fr);
   height: 500px;
   width: 50%;
-  grid-gap: 20px;
+  grid-gap: 40px;
 }
 .three_card1 /* Partie gauche des activités à Marseille */ {
   grid-template-areas:
@@ -334,10 +344,12 @@ input /* barre de recherche */ {
     "port pomegues"
     "port pomegues"
     "port pomegues"
+    "port pomegues"
+    "port frioul"
     "port frioul"
     "port frioul"
     "port frioul";
-  padding-right: 10px;
+  padding-right: 35px;
 }
 .three_card2 /* Seconde partie des activités à Marseille */ {
   grid-template-areas:
@@ -345,6 +357,8 @@ input /* barre de recherche */ {
     "calanque dame"
     "calanque dame"
     "calanque dame"
+    "calanque dame"
+    "calanque longchamp"
     "calanque longchamp"
     "calanque longchamp"
     "calanque longchamp"
@@ -387,10 +401,10 @@ input /* barre de recherche */ {
   height: 90%;
 }
 #pomegues .activity_img {
-  height: 85%;
+  height: 83%;
 }
 #frioul .activity_img {
-  height: 70%;
+  height: 73%;
 }
 
 .activity_img img {
