@@ -221,9 +221,6 @@ input /* barre de recherche */ {
   padding-left: 20px;
 }
 
-.flex_aside_card:nth-child(1n) {
-  margin: 0;
-}
 /* class commune */
 .color_card {
   height: 135px;
@@ -516,6 +513,9 @@ footer p {
     width: 100%;
     display: flex;
     text-align: center;
+  }
+  nav:nth-child(1n) {
+    padding-left: 47px;
   }
   nav a {
     margin: 0;
