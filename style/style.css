@@ -507,7 +507,7 @@ footer p {
 }
 
 /* Version mobile */
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   /* VERSION MOBILE HEADER */
   header {
     flex-direction: column;
